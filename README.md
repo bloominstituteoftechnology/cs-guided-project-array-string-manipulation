@@ -1,1 +1,1 @@
-# cs-guided-project-array-string-manipulation
+# arg-cs-guided-project-solution-array-string-manipulation
