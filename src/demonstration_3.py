@@ -3,7 +3,7 @@ You are given two input strings, each representing a binary string.
 
 Write a function that returns their sum as a binary string.
 
-The input strings are both non-empty and contains only characters 1 or 0. Additionally, except for the string "0", your inputs will not contain any leading zeroes.
+The input strings are both non-empty and contain only characters 1 or 0. Additionally, except for the string "0", your inputs will not contain any leading zeros.
 
 Example 1:
 
