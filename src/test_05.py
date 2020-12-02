@@ -37,3 +37,18 @@ The maximum possible profit.
 """
 
 def buyAndSellStock(prices):
+    max_profit = 0
+    min_stock = 99999999999999999
+    
+    for index, stock_value in enumerate(prices):
+        if stock_value < min_stock:
+            min_stock = stock_value
+        if index != 0:
+            if (stock_value - min_stock) > max_profit:
+                max_profit = stock_value - min_stock
+    
+    return max_profit
+
+
+
+ 

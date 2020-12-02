@@ -24,3 +24,11 @@ The resulting string after replacing each of its characters.
 
 """
 def alphabeticShift(inputString):
+    output = ""
+    
+    for char in inputString:
+        if char == "z":
+            output += "a"
+        else:  
+            output += chr(ord(char) + 1)
+    return output

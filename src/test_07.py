@@ -26,3 +26,13 @@ true is the sequence is regular and false otherwise.
 """
 
 def validParenthesesSequence(s):
+    string = s
+    parentheses = "()" 
+    
+    while True:
+        string = string.replace("()", '')
+        if not parentheses in string:
+            if string == "":
+                return True
+            else:
+                return False
