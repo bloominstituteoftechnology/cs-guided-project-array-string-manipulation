@@ -1,25 +1,38 @@
-"""
-Given an array of integers `nums`, define a function that returns the "pivot" index of the array.
-
-The "pivot" index is where the sum of all the numbers on the left of that index is equal to the sum of all the numbers on the right of that index.
-
-If the input array does not have a "pivot" index, then the function should return `-1`. If there are more than one "pivot" indexes, then you should return the left-most "pivot" index.
-
-Example 1:
-
-Input: nums = [1,7,3,6,5,6]
-Output: 3
-Explanation:
-The sum of the numbers to the left of index 3 (1 + 7 + 3 = 11) is equal to the sum of numbers to the right of index 3 (5 + 6 = 11).
-Also, 3 is the first index where this occurs.
-
-Example 2:
-
-Input: nums = [1,2,3]
-Output: -1
-Explanation:
-There is no index that satisfies the conditions in the problem statement.
-"""
-def pivot_index(nums):
-    # Your code here
-
+# how do we implement an array-reverse function in-place? 
+def in_place_reverse(arr):
+    # out-of-place solution 
+    # Python's slicing syntax makes a copy of the array 
+    # with the ordering of the elements reversed 
+    # Space complexity: O(n)
+    # Time complexity: O(n)
+    # return arr[::-1]
+​
+    # how do we do this while only allocating a constant 
+    # amount of additional memory? 
+    # how can we re-use the input array? 
+    # We're going to use a two-pointer approach, starting at 
+    # the ends of the array, swapping the values those pointers 
+    # referring to, and then moving those pointers closer 
+    # towards the center of the array 
+    # Time complexity: O(n)
+    # Space: O(1)
+    left = 0 
+    right = len(arr) - 1
+​
+    # we know we need to loop 
+    # what's the stopping criteria for our loop? 
+    # when the left and right pointers refer to the 
+    # same index 
+    # criteria: so long as left < right 
+    while left < right:
+        # swap the values at these two pointers 
+        arr[left], arr[right] = arr[right], arr[left]
+​
+        # move the pointers closer towards the center 
+        left += 1
+        right -= 1
+​
+    return arr
+    
+arr = [1,2,3,4,5,6,7,8]
+print(in_place_reverse(arr))
