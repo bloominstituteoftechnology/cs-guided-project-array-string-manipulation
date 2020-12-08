@@ -4,4 +4,4 @@ This is the starter code for Computer Science - Sprint 2: Data Structures and Al
 
 Please fork and clone this repo to your computer by the start of class.
 
-Sean Chen Dec 7th: String Manip and Array
+Sean Chen Dec 7th: String Manip and Array: https://youtu.be/fHxNLJXAeek
