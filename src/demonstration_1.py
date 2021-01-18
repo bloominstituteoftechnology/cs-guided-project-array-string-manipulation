@@ -56,24 +56,59 @@ def pivot_index(nums):
     '''
     # O(n) + O(n) == O(2 * n) ~ O(n) time 
     # O(1) space 
-​
-    total = sum(nums) # O(n)
-    running = 0 
-​
-    for i, num in enumerate(nums): # O(n)
-        # O(1)
-        # subtract num from total 
-        total -= num
-​
-        # check if total == running 
-        if total == running:
-            # return the index of num 
+
+#     total = sum(nums) # O(n)
+#     running = 0 
+# ​
+#     for i, num in enumerate(nums): # O(n)
+#         # O(1)
+#         # subtract num from total 
+#         total -= num
+# ​
+#         # check if total == running 
+#         if total == running:
+#             # return the index of num 
+#             return i
+# ​
+#         running += num
+# ​
+#     return -1
+# ​
+# ​
+# nums = [1,2,3]
+# print(pivot_index(nums))
+
+#     for i in range(len(nums)):
+#         left_subarray = nums[0:i]
+#         right_subarray = nums[i + 1:]
+#         left_sum = sum(left_subarray)
+#         right_sum = sum(right_subarray)
+#         if left_sum == right_sum:
+#             return i
+#     return - 1
+    
+
+# print(pivot_index([1,7,3,6,5,6]))
+#     l_sum = 0
+#     r_sum = sum(nums[1:])
+#     for i in range(len(nums)):
+#         if l_sum == r_sum:
+#             return i
+#         l_sum += nums[i]
+#         if (i + 1 == len(nums)):
+#             r_sum = 0
+#         else:
+#             r_sum -= nums[i+1]
+#     return -1
+# print(pivot_index([1,7,3,6,5,6]))
+    total_sum = sum(nums)
+    left_sum = 0
+    for i in range(len(nums)):
+        right_sum = total_sum - left_sum - nums[i]
+        if left_sum == right_sum:
             return i
-​
-        running += num
-​
+        left_sum += nums[i]
     return -1
-​
-​
-nums = [1,2,3]
-print(pivot_index(nums))
+
+
+print(pivot_index([1,7,3,6,5,6]))
