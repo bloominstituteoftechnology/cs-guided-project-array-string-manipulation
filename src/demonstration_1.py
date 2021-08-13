@@ -3,7 +3,7 @@ Given an array of integers `nums`, define a function that returns the "pivot" in
 
 The "pivot" index is where the sum of all the numbers on the left of that index is equal to the sum of all the numbers on the right of that index.
 
-If the input array does not have a "pivot" index, then the function should return `-1`. If there are more than one "pivot" indexes, then you should return the left-most "pivot" index.
+If the input array does not have a "pivot" index, then the function should return `-1`. If there is more than one "pivot" index, then you should return the left-most "pivot" index.
 
 Example 1:
 
